@@ -1,0 +1,7 @@
+add gum som metoder der ligger i maskinen
+
+kalder mønt metode 
+
+når den har fået en mønt og den er godkendt kalder den dispencer metoden
+den har en case til manuelt og en til tilfældigt
+tilfældig køre random
