@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Bublegum
 {
@@ -7,23 +6,13 @@ namespace Bublegum
     {
         static void Main(string[] args)
         {
-            for(int i = 0; i<12; i++) 
-            {
-                GumInDisp.Add(new Gum("Red", "Strawberry"));
-                GumInDisp.Add(new Gum("Blue", "Mint"));
-                GumInDisp.Add(new Gum("Green", "Watermelon"));
-                GumInDisp.Add(new Gum("Yellow", "Lemon"));
-            }
+            Gum gum = new Gum("","");
+            Dispencer dispencer = new Dispencer();
             
-            List<string> gum = new List<string>();
-            gum.Add("red");
-            gum.Add("green");
-            gum.Add("blue");
-            gum.Add("yellow");
-            gum.Add("purple");
-            gum.Add("orange");
-
-
+            Console.WriteLine("Throw in your coin - it has to be 5");
+            int throwCoin = Int32.Parse(Console.ReadLine());
+            dispencer.ThrowCoin(throwCoin);
+            
         }
     }
 }

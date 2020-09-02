@@ -6,6 +6,11 @@ namespace Bublegum
         private string color;
         private string flavour;
 
+        public Gum(string color, string flavour)
+        {
+            this.color = Color;
+            this.flavour = Flavour;
+        }
         public string Color
         {
             get => color;
