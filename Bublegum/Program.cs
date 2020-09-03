@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Bublegum
 {
@@ -6,13 +7,25 @@ namespace Bublegum
     {
         static void Main(string[] args)
         {
-            Gum gum = new Gum("","");
+            Console.WriteLine("velkommen til tyggegummiemaskinen");
             Dispencer dispencer = new Dispencer();
-            
-            Console.WriteLine("Throw in your coin - it has to be 5");
-            int throwCoin = Int32.Parse(Console.ReadLine());
-            dispencer.ThrowCoin(throwCoin);
-            
+            dispencer.AddGum();
+            List<Gum> tempList = new List<Gum>(); 
+            tempList = dispencer.GetGums();
+
+            foreach (Gum VARIABLE in tempList)
+            {
+                Console.WriteLine(VARIABLE.Color);
+            }
+
+
+            //Console.WriteLine("Throw in your coin - it has to be 5");
+            //int throwCoin = Int32.Parse(Console.ReadLine());
+            //dispencer.ThrowCoin(throwCoin);
+            //dispencer.GumInDisp();
+
+            //dispencer.ListOfGums();
+
         }
     }
 }
