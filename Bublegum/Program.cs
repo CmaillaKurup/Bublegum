@@ -7,25 +7,18 @@ namespace Bublegum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("velkommen til tyggegummiemaskinen");
+            List<Gum> tempList = new List<Gum>();
             Dispencer dispencer = new Dispencer();
             dispencer.AddGum();
-            List<Gum> tempList = new List<Gum>(); 
             tempList = dispencer.GetGums();
+            int a = dispencer.RemainingGums();
 
-            foreach (Gum VARIABLE in tempList)
+            do
             {
-                Console.WriteLine(VARIABLE.Color);
-            }
-
-
-            //Console.WriteLine("Throw in your coin - it has to be 5");
-            //int throwCoin = Int32.Parse(Console.ReadLine());
-            //dispencer.ThrowCoin(throwCoin);
-            //dispencer.GumInDisp();
-
-            //dispencer.ListOfGums();
-
+                int throwCoin = Int32.Parse(Console.ReadLine());
+                dispencer.CoinInput(throwCoin);
+                Console.WriteLine(a);
+            } while (true);
         }
     }
 }
